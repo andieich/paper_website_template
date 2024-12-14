@@ -1,0 +1,12 @@
+#Set up quarto
+quarto install tinytex
+quarto add quarto-ext/fontawesome
+
+#Render
+#Manuscript has to be rendered first
+quarto render manuscript
+
+#then preview or redner website
+
+quarto preview
+quarto render

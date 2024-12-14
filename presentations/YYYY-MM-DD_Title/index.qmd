@@ -1,0 +1,16 @@
+---
+title: "TITLE"
+date: YYY-MMM-DDD
+toc: false
+resources: slides
+abstract: |
+  BLAH
+abstract-title: "Location"
+published-title: "Presented"
+image: first-slide.png
+page-layout: full
+---
+#add URL in scr
+<div class="ratio ratio-16x9">
+<iframe class="slide-deck" src="" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>

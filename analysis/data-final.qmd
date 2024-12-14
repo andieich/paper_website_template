@@ -1,0 +1,18 @@
+---
+title: "Download final data"
+format:
+  html:
+    code-tools: false
+    toc: false
+---
+
+Could be like this:  
+The cleaned data is available in two formats:
+
+- CSV file for any program
+- `.rds` file for R <span class="small">(load with `df <- readRDS("weekly_panel.rds")`)</span>
+
+## Data
+
+<a class="btn btn-primary btn-sm" target="_blank" href="../data/dat.csv"> {{< fa table >}}  &ensp;<span class="font-monospace">dat.csv</span></a> &emsp;
+<a class="btn btn-success btn-sm" target="_blank" href="../data/dat.rds"> {{< fa brands r-project >}} &ensp;<span class="font-monospace">dat.rds</span></a>

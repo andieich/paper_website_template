@@ -1,0 +1,105 @@
+project:
+  title: "Title"
+  type: website
+  
+  preview: 
+    port: 3333
+    browser: true
+    watch-inputs: false
+    navigate: true
+  
+  render: 
+    # Render all .qmd files
+    - "**/*.qmd"
+
+    # Don't render anything in the manuscript folder because otherwise all the 
+    # output gets placed in _site/ only, which is annoying. Instead this folder 
+    # needs to be rendered separately, and *before* the overall website project 
+    - "!manuscript/"
+
+  
+  resources:
+    # But *do* place the outputs from the manuscript folders in the 
+    # rendered site folder
+    - "manuscript/output"
+
+
+# See https://quarto.org/docs/projects/code-execution.html#freeze
+execute:
+  freeze: auto  # Re-render only when source changes
+
+website:
+  repo-url: "" # Add github page for website
+  repo-actions: [edit, issue]
+  
+  page-navigation: true
+  
+  navbar:
+    pinned: true
+    background: primary
+    search: false
+    left:
+      - text: "Data"
+        file: analysis/data-final.qmd
+      - text: "Analysis"
+        file: analysis/hypotheses.qmd
+      - text: "Presentations"
+        file: presentations/index.qmd
+      - text: "Paper"
+        menu:
+          - file: analysis/paper.qmd
+          - file: analysis/appendix.qmd
+    right:
+      - icon: github
+        aria-label: github
+        href: URL
+
+  sidebar:
+    - title: "Data"
+      style: docked
+      background: dark
+      contents:
+        - section: "Data"
+          contents:
+            - analysis/data-final.qmd
+    - title: "Analysis"
+      contents:
+        - section: "Questions"
+          contents:
+            - analysis/hypotheses.qmd
+        - section: "Models"
+          contents:
+            - analysis/model-details.qmd
+    
+    - title: "Empty space"
+
+  page-footer:
+  
+    # Add author and year
+    left: |
+      Content {{< fa brands creative-commons >}} YEAR by NAME, NAME, NAME ... <br>
+      All content licensed under a {{< fa brands creative-commons >}}
+      {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-nc >}}
+      [Creative Commons Attribution-NonCommercial 4.0 International license (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)
+   
+    # Add URL
+    right: |
+      Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
+      Based on the research websites from [Andrew Heiss](https://www.andrewheiss.com/)
+
+format:
+  html:
+    shift-heading-level-by: 1
+    theme: 
+      - zephyr
+      - html/custom.scss
+    toc: true
+    toc-depth: 4
+    retina: 3
+    highlight-style: monokai
+    code-fold: true
+    code-tools: true
+    knitr:
+      opts_chunk:
+        dev: "ragg_png"
+        dpi: 300

@@ -1,0 +1,118 @@
+---
+title: 'Online appendix for "TITLE"'
+short-title: 'Online appendix for "SHORTTITLE"'
+subtitle: "(Research note)"
+author:
+- name: A B
+  affiliation: C
+  orcid: XXX
+  url: a.bc
+  email: d@e.fg
+date: 2024-12-13
+code-repo: "Access the code, data, and analysis at <GithubLinl>"
+bibliography: references.json
+csl: csl/chicago-author-date.csl
+link-citations: true
+crossref: 
+  tbl-title: "Table&nbsp;SI"
+  fig-title: "Figure&nbsp;SI"
+---
+
+```{r setup, include=FALSE}
+if (is.null(knitr::pandoc_to())) {
+  fmt_out <- "interactive"
+} else {
+  fmt_out <- knitr::pandoc_to()
+}
+
+knitr::opts_chunk$set(echo = FALSE, include = FALSE, 
+                      warning = FALSE, message = FALSE)
+
+knitr::opts_chunk$set(fig.align = "center", fig.retina = 3,
+                      fig.width = 6, fig.height = (6 * 0.618),
+                      out.width = "80%", collapse = TRUE)
+
+options(digits = 3, width = 120,
+        dplyr.summarise.inform = FALSE)
+```
+
+```{r tikz-stuff, include=FALSE}
+if (Sys.info()["sysname"] == "Darwin") {
+  # Necessary for using dvisvgm on macOS
+  # See https://www.andrewheiss.com/blog/2021/08/27/tikz-knitr-html-svg-fun/
+  Sys.setenv(LIBGS = "/opt/homebrew/opt/ghostscript/lib/libgs.dylib")
+}
+
+# Conditional tikz output types; use PDF if this is LaTeX, otherwise use SVG with outlined fonts
+if (fmt_out == "latex") {
+  knitr::opts_template$set(
+    tikz_settings = list(
+      fig.ext = "pdf", 
+      fig.align = "center", 
+      extra.preamble = c(
+        "\\usepackage{libertine}",
+        "\\usepackage{libertinust1math}"
+      )
+    )
+  )
+} else {
+  knitr::opts_template$set(
+    tikz_settings = list(
+      fig.ext = "svg", 
+      fig.align = "center", 
+      extra.preamble = c(
+        "\\usepackage{libertine}",
+        "\\usepackage{libertinust1math}"
+      ),
+      engine.opts = list(dvisvgm.opts = "--no-fonts")
+    )
+  )
+}
+```
+
+```{r libraries-data}
+#load libraries
+```
+
+::: {.content-visible when-meta="list-of-figures-normal"}
+```{=latex}
+\listoftables
+\listoffigures
+```
+:::
+
+::: {.content-visible when-meta="list-of-figures-single"}
+
+```{=latex}
+\begin{singlespace}
+\listoftables
+\listoffigures
+\end{singlespace}
+```
+
+:::
+
+\clearpage
+
+# A
+
+Aaaaaaaaaaaaaaa
+
+## B
+
+BBbbbbb
+
+```{r}
+#| label: fig-label
+#| fig-cap: "Figure Title"
+#| fig-width: 6.5
+#| fig-height: 2.5
+#| out-width: "100%"
+#| include: true
+#| echo: false
+ plot(1,2)
+```
+
+\clearpage
+
+# References

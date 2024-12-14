@@ -1,0 +1,25 @@
+---
+title: "Title"
+author:
+- name: XXX
+  affiliation: XXX
+  orcid: xxxx
+  url: xxxx
+  email: xxx@xx.xx
+
+format:
+  html:
+    code-tools: false
+    toc: false
+sidebar: false
+---
+
+```{r echo=FALSE}
+yaml_metadata <- rmarkdown::yaml_front_matter(here::here("manuscript", "manuscript.qmd"))
+title <- yaml_metadata$title
+abstract <- yaml_metadata$abstract
+```
+
+### Abstract
+
+`r abstract`

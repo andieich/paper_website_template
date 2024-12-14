@@ -1,0 +1,19 @@
+---
+title: "Model details"
+---
+
+```{r setup, include=FALSE}
+options(dplyr.summarise.inform = FALSE,
+        knitr.kable.NA = "")
+```
+
+```{r load-libraries-data, warning=FALSE, message=FALSE}
+#packages & setup
+```
+
+BLAH
+
+```{r}
+#Analysis
+```
+

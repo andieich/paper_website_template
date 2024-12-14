@@ -1,0 +1,15 @@
+{
+  "hash": "0447f7290e5f79790aec71b78bd63ede",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Model details\"\n---\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#packages & setup\n```\n:::\n\n\n\n\nBLAH\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#Analysis\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

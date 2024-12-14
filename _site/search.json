@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "presentations/index.html",
+    "href": "presentations/index.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "TITLE\n\n\nBLAH\n\n\n\n\n\n\nInvalid Date\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Title",
+    "section": "",
+    "text": "Abstract\nEtiam non efficitur urna, quis elementum nisi. Mauris posuere a augue vel gravida. Praesent luctus erat et ex iaculis interdum. Nulla vestibulum quam ac nunc consequat vulputate. Nullam iaculis lobortis sem sit amet fringilla. Aliquam semper, metus ut blandit semper, nulla velit fermentum sapien, fermentum ultrices dolor sapien sed leo. Vestibulum molestie faucibus magna, at feugiat nulla ullamcorper a. Aliquam erat volutpat. Praesent scelerisque magna a justo maximus, sit amet suscipit mauris tempor. Nulla nec dolor eget ipsum pellentesque lobortis a in ipsum. Morbi turpis turpis, fringilla a eleifend maximus, viverra nec neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  },
+  {
+    "objectID": "analysis/model-details.html",
+    "href": "analysis/model-details.html",
+    "title": "Model details",
+    "section": "",
+    "text": "Code\n#packages & setup\n\n\nBLAH\n\n\nCode\n#Analysis",
+    "crumbs": [
+      "Analysis",
+      "Models",
+      "Model details"
+    ]
+  },
+  {
+    "objectID": "analysis/data-final.html",
+    "href": "analysis/data-final.html",
+    "title": "Download final data",
+    "section": "",
+    "text": "Could be like this:\nThe cleaned data is available in two formats:\n\nCSV file for any program\n.rds file for R (load with df &lt;- readRDS(\"weekly_panel.rds\"))\n\n\nData\n   dat.csv      dat.rds",
+    "crumbs": [
+      "Data",
+      "Download final data"
+    ]
+  },
+  {
+    "objectID": "analysis/appendix.html",
+    "href": "analysis/appendix.html",
+    "title": "Appendix",
+    "section": "",
+    "text": "HTML\n   \n  \n  \n   HTML (new window)\n  \n\n  \n   PDF\n   \n  \n  \n   PDF (download)\n  \n  \n  \n   Manuscripty PDF\n   \n  \n  \n   Manuscripty PDF (download)"
+  },
+  {
+    "objectID": "analysis/hypotheses.html",
+    "href": "analysis/hypotheses.html",
+    "title": "Hypotheses",
+    "section": "",
+    "text": "Blablablubb\n\nBlubb",
+    "crumbs": [
+      "Analysis",
+      "Questions",
+      "Hypotheses"
+    ]
+  },
+  {
+    "objectID": "analysis/paper.html",
+    "href": "analysis/paper.html",
+    "title": "Paper",
+    "section": "",
+    "text": "HTML\n   \n  \n  \n   HTML (new window)\n  \n\n  \n   PDF\n   \n  \n  \n   PDF (download)\n  \n  \n  \n   Manuscripty PDF\n   \n  \n  \n   Manuscripty PDF (download)"
+  },
+  {
+    "objectID": "presentations/YYYY-MM-DD_Title/index.html",
+    "href": "presentations/YYYY-MM-DD_Title/index.html",
+    "title": "TITLE",
+    "section": "",
+    "text": "#add URL in scr"
+  }
+]
