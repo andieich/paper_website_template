@@ -6,11 +6,6 @@ project:
     - "manuscript.qmd"
     - "appendix.qmd"
 
-# This is necessary to keep intermediate files/folders hanging around when 
-# rendering to the same output format (like two different PDFs)
-# https://github.com/quarto-dev/quarto-cli/issues/8373#issuecomment-1979245883
-keep-md: true
-
 format:
   # Nice HTML output
   html:
@@ -29,12 +24,6 @@ format:
       - format: hikmah-pdf
         text: PDF
         icon: file-pdf
-      - format: hikmah-manuscript-pdf+ms
-        text: Manuscripty PDF
-        icon: file-pdf
-      - format: hikmah-manuscript-docx
-        text: Manuscripty Word
-        icon: file-word
     shift-heading-level-by: 1
     theme: 
       - zephyr
@@ -42,9 +31,9 @@ format:
     citeproc: false
     filters: 
       - at: pre-render
-        path: "_extensions/andrewheiss/wordcount/citeproc.lua"
+        path: "_extensions/wordcount/citeproc.lua"
       - at: pre-render
-        path: "_extensions/andrewheiss/wordcount/wordcount.lua"
+        path: "_extensions/wordcount/wordcount.lua"
     knitr:
       opts_chunk:
         dev: "ragg_png"
@@ -72,7 +61,6 @@ format:
         \usepackage{ragged2e}
         \justifying
         \everydisplay\expandafter{\the\everydisplay\small }
-
         \SetTblrStyle{foot}{font=\footnotesize}
 
         \NewTblrTheme{long}{
@@ -87,50 +75,5 @@ format:
     knitr:
       opts_chunk:
         dev: "cairo_pdf"
-  
-  # Manuscript-y PDF output
-  hikmah-manuscript-pdf+ms:
-    endnotes: false
-    list-of-figures-single: true
 
-    # Custom fonts
-    mainfont: "Linux Libertine O"
-    mainfontoptions:
-      - "Numbers=Proportional"
-      - "Numbers=OldStyle"
-    mathfont: "Libertinus Math"
 
-    include-in-header:
-      # The \everydisplay thing makes all math blocks use \small font
-      text: |
-        \usepackage{mathtools}
-        \usepackage{tabularray}
-        \usepackage{ragged2e}
-        \justifying
-        \everydisplay\expandafter{\the\everydisplay\small }
-
-        \SetTblrStyle{foot}{font=\footnotesize}
-
-        \AtBeginEnvironment{longtblr}{\setlength{\RaggedRightParindent}{0pt}\singlespacing}
-        \AtBeginEnvironment{Shaded}{\singlespacing}
-
-        % Make these headings smaller
-        \renewcommand{\cfttoctitlefont}{\normalsize\bfseries}  % TOC
-        \renewcommand{\cftloftitlefont}{\normalsize\bfseries}  % List of figures
-        \renewcommand{\cftlottitlefont}{\normalsize\bfseries}  % List of tables
-
-        \NewTblrTheme{long}{
-          \SetTblrStyle{caption}{hang=0pt}
-          \SetTblrStyle{capcont}{hang=0pt}
-          \SetTblrStyle{caption-tag}{font=\small}
-          \SetTblrStyle{caption-text}{font=\small}
-          \SetTblrStyle{conthead-text}{font=\small}
-          \SetTblrStyle{contfoot}{font=\small}
-        }
-
-    knitr:
-      opts_chunk:
-        dev: "cairo_pdf"
-
-  # Manuscript-y Word output
-  hikmah-manuscript-docx: default
