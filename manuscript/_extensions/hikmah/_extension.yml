@@ -45,7 +45,4 @@ contributes:
       block-headings: false
       # Indent paragraphs instead of adding space between them
       indent: true
-    html:
-      theme: styles/pretty.scss
-      template-partials:
-        - "partials/title-block.html"
+
