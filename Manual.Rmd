@@ -6,7 +6,7 @@ quarto add quarto-ext/fontawesome
 #Manuscript has to be rendered first
 quarto render manuscript
 
-#then preview or redner website
+#then preview or render website
 
 quarto preview
 quarto render
